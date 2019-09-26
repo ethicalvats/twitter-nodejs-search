@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mongo:
+    image: 'mongo:3.4.1'
+    ports:
+      - '27017:27017'
+    volumes:
+      - 'mongo:/data/db'
+
+  api:
+    depends_on:
+      - 'mongo'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:8080'
+    environment:
+      - TWITTER_CONSUMER_KEY=SFrrSHAjgdi3CXQSsbSFZdJ98
+      - TWITTER_CONSUMER_SECRET=wONP86wW86EXS3ChHTltgpCIOIj0QzbieM61vAVtERTgsdUI3J
+      - TWITTER_ACCESS_TOKEN_KEY=937663286195109888-labO0kiO6z4RsPgEEt0IjbWtXpl9Oon
+      - TWITTER_ACCESS_TOKEN_SECRET=rVTmevuOoHAXEDS0il1TbdvPBl2tIS8eBmO9wUvluiaXZ
+      - MONGO_URL=mongodb://mongo:27017/api-mongo
+volumes:
+  mongo:
