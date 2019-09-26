@@ -1,3 +1,4 @@
 export interface TweetService {
-    tweets: any[]
+    init(): void
+    tweets(user: string, sort: number): Promise<any[]>
 }

@@ -1,1 +1,1 @@
-import './tweetAPI'
+import './tweetsController'

@@ -1,3 +1,4 @@
 export interface TweetCollection{
-    fetchTweetsByUser(user: string): any[]
+    storeTweets(tweet: any): Promise<boolean>
+    fetchTweetsByUser(user: string, sort: number): Promise<any[]>
 }
