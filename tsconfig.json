@@ -17,6 +17,7 @@
     "include": [
       "src/**/*"
     ],
+  "exclude": ["src/test"],
     "compileOnSave": true,
     "buildOnSave": true
   }
