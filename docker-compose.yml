@@ -17,10 +17,10 @@ services:
     ports:
       - '3000:8080'
     environment:
-      - TWITTER_CONSUMER_KEY=SFrrSHAjgdi3CXQSsbSFZdJ98
-      - TWITTER_CONSUMER_SECRET=wONP86wW86EXS3ChHTltgpCIOIj0QzbieM61vAVtERTgsdUI3J
-      - TWITTER_ACCESS_TOKEN_KEY=937663286195109888-labO0kiO6z4RsPgEEt0IjbWtXpl9Oon
-      - TWITTER_ACCESS_TOKEN_SECRET=rVTmevuOoHAXEDS0il1TbdvPBl2tIS8eBmO9wUvluiaXZ
+      - TWITTER_CONSUMER_KEY=<your key>
+      - TWITTER_CONSUMER_SECRET=<your key>
+      - TWITTER_ACCESS_TOKEN_KEY=<your key>
+      - TWITTER_ACCESS_TOKEN_SECRET=<your key>
       - MONGO_URL=mongodb://mongo:27017/api-mongo
 volumes:
   mongo:
